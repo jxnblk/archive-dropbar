@@ -37,6 +37,8 @@
     </div>
   </div>
 
+
+
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
 <script>
 
@@ -45,7 +47,7 @@
   var dropbar = angular.module('dropbar', []);
 
   dropbar.controller('DropbarCtrl', function DropbarCtrl($scope) {
-    $scope.dbIsOpen = false;
+    $scope.dbIsOpen = true;
     $scope.toggleDropbar = function(){
       $scope.dbIsOpen = !$scope.dbIsOpen;
     };

@@ -7,6 +7,7 @@ var dropbarIsOpen = false;
 dropbar.style.height = 0;
 
 function toggleDropbar() {
+  dropbar.style.transition = '';
   if (dropbarIsOpen == false) dropbar.style.height = dropbarHeight + 'px';
   else dropbar.style.height = 0;
   dropbarIsOpen = !dropbarIsOpen;
@@ -16,9 +17,7 @@ function toggleDropbar() {
 window.onresize = function(event) {
   dropbar.style.transition = 'none';
   dropbar.style.height = 'auto';
-  // dropbar.style.transition = '';
   dropbarHeight = dropbar.offsetHeight;
-  console.log(dropbarHeight);
+  if (dropbarIsOpen == true) dropbar.style.height = dropbarHeight + 'px';
   if (dropbarIsOpen == false) dropbar.style.height = 0;
-  dropbar.style.transition = '';
 };
