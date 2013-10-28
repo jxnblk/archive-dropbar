@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" ng-app="dropbar">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="/favicon.png" /> -->
+  <!-- <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png" /> -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body ng-controller="DropbarCtrl">
+
+  <div class="toolbar clearfix">
+    <h1 class="left">Dropbar NG</h1>
+    <a href="#!" ng-click="toggleDropbar()">Toggle Dropbar</a>
+  </div>
+  <div class="dropbar white bg-dark" dropbar is-open="dbIsOpen">
+    <div class="p4 clearfix">
+      <h1>Dropbar contents</h1>
+      <ul class="left">
+        <li>Lots and lots</li>
+        <li>And lots and lots</li>
+        <li>And lost of lists</li>
+      </ul>
+      <ul class="left">
+        <li>Lots and lots</li>
+        <li>And lots and lots</li>
+        <li>And lost of lists</li>
+      </ul>
+      <ul class="left">
+        <li>Lots and lots</li>
+        <li>And lots and lots</li>
+        <li>And lost of lists</li>
+      </ul>
+    </div>
+  </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+<script>
+
+  'use strict';
+
+  var dropbar = angular.module('dropbar', []);
+
+  dropbar.controller('DropbarCtrl', function DropbarCtrl($scope) {
+    $scope.dbIsOpen = false;
+    $scope.toggleDropbar = function(){
+      $scope.dbIsOpen = !$scope.dbIsOpen;
+    };
+  });
+
+  dropbar.directive('dropbar', function ($window) {
+    return {
+      restrict: 'A',
+      scope: { isOpen: '=' },
+      link: function (scope, elem, attrs) {
+        console.log('D R O P B A R');
+        var dropbar = elem[0];
+        var height = dropbar.offsetHeight;
+        var setHeight = function() {
+          dropbar.style.transition = '';
+          if (scope.isOpen == true) dropbar.style.height = height + 'px';
+          else dropbar.style.height = 0;
+        };
+        scope.$watch('isOpen', function() {
+          setHeight();
+        });
+        window.onresize = function(){
+          dropbar.style.transition = 'none';
+          dropbar.style.height = 'auto';
+          height = dropbar.offsetHeight;
+          if (scope.isOpen == true) dropbar.style.height = height + 'px';
+          if (scope.isOpen == false) dropbar.style.height = 0;
+        };
+      }
+    };
+  });
+
+</script>    
+  
+
+
+</body>
+</html>
