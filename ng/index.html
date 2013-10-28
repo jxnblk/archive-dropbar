@@ -47,7 +47,7 @@
   var dropbar = angular.module('dropbar', []);
 
   dropbar.controller('DropbarCtrl', function DropbarCtrl($scope) {
-    $scope.dbIsOpen = true;
+    $scope.dbIsOpen = false;
     $scope.toggleDropbar = function(){
       $scope.dbIsOpen = !$scope.dbIsOpen;
     };
