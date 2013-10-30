@@ -1,0 +1,16 @@
+// Toolbar
+
+.toolbar {
+  min-height: 3*$space;
+  line-height: 3*$space;
+  padding-right: $space;
+  padding-left: $space;
+  h1, h2, h3, h4, h5, p, li, a {
+    line-height: inherit;
+    float: left;
+  }
+  a:not(.flush) {
+    padding-right: $space;
+    padding-left: $space;
+  }
+}

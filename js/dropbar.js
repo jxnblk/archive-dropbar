@@ -2,27 +2,27 @@
 //
 // Element height getter/setter for using CSS transition-property: height
 
-var dropbar = function(elem) {
-  // re-write the js here to limit scope
-};
-var dropbar = document.getElementsByClassName('dropbar')[0];
-var dropbarHeight = dropbar.offsetHeight;
-var dropbarIsOpen = false;
+// Need to scope this to specific elements
 
-dropbar.style.height = 0;
+var db = document.getElementsByClassName('dropbar')[0];
+
+var height = db.offsetHeight;
+var isOpen = false;
+db.style.height = 0;
+
+  
+
+  window.onresize = function(e) {
+    db.style.transition = 'none';
+    db.style.height = 'auto';
+    height = db.offsetHeight;
+    if (isOpen == true) db.style.height = height + 'px';
+    if (isOpen == false) db.style.height = 0;
+  };
 
 function toggleDropbar() {
-  dropbar.style.transition = '';
-  if (dropbarIsOpen == false) dropbar.style.height = dropbarHeight + 'px';
-  else dropbar.style.height = 0;
-  dropbarIsOpen = !dropbarIsOpen;
-};
-
-// Handle changes in height due to reflowing on window resizing
-window.onresize = function(event) {
-  dropbar.style.transition = 'none';
-  dropbar.style.height = 'auto';
-  dropbarHeight = dropbar.offsetHeight;
-  if (dropbarIsOpen == true) dropbar.style.height = dropbarHeight + 'px';
-  if (dropbarIsOpen == false) dropbar.style.height = 0;
+  db.style.transition = '';
+  if (isOpen == false) db.style.height = height + 'px';
+  else db.style.height = 0;
+  isOpen = !isOpen;
 };
