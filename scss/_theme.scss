@@ -11,6 +11,10 @@ $red: #f40;
 $green: #0c6;
 
 // Base elements
+body {
+  color: $dark;
+  background-color: #fff;
+}
 a {
   color: $blue;
   text-decoration: none;
