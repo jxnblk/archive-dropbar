@@ -6,6 +6,10 @@ $dark: #1c2226;
 $light-gray: #dadfe0;
 $mid-gray: #cacfd0;
 
+// Secondary Colors
+$red: #f40;
+$green: #0c6;
+
 // Base elements
 a {
   color: $blue;
@@ -50,5 +54,81 @@ a {
     background-color: lighten($dark,5%);
     border: 1px solid $blue;
     box-shadow: 0 0 .25*$space rgba($blue,.8);
+  }
+}
+
+// Buttons
+
+// Global button themes
+.btn {
+  font-weight: bold;
+  transition: all .2s ease;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $blue;
+  &:hover {
+    color: #fff;
+    background-color: lighten($blue,10%);
+  }
+  &:active {
+    box-shadow: inset 0 .125*$space .5*$space rgba(#000,.3);
+  }
+}
+
+.btn-secondary {
+  color: $blue;
+  background-color: transparent;
+  border: 2px solid $blue;
+  &:hover {
+    color: $blue;
+    background-color: rgba($blue,.2);
+  }
+  &:active {
+    background-color: rgba($blue,.3);
+  }
+}
+
+.btn-disabled {
+  color: lighten($dark,40%);
+  background-color: $light-gray;
+  &:hover {
+    color: lighten($dark,40%);
+  }
+}
+
+.btn-positive {
+  color: #fff;
+  background-color: $green;
+  &:hover {
+    color: #fff;
+    background-color: lighten($green,10%);
+  }
+}
+
+.btn-negative {
+  color: #fff;
+  background-color: $red;
+  &:hover {
+    color: #fff;
+    background-color: lighten($red,10%);
+  }
+}
+
+.btn-toggle {
+  color: $blue;
+  background-color: transparent;
+  border: 2px solid $blue;
+  &:hover {
+    color: $blue;
+    background-color: rgba($blue,.2);
+  }
+  &:active {
+    background-color: rgba($blue,.3);
+  }
+  &.is-on {
+    color: #fff;
+    background-color: $blue;
   }
 }

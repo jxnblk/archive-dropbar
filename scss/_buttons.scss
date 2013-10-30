@@ -1,0 +1,48 @@
+// Buttons
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 3*$space;
+  padding: 0 $space;
+  white-space: nowrap; // is this too specific?
+  border-radius: .25*$space;
+  // Add resets for button element
+}
+
+.btn-small {
+  line-height: 2*$space;
+  padding: 0 .75*$space;
+}
+
+.btn-big {
+  font-size: 1.25em;
+  line-height: 4*$space;
+  padding: 0 1.5*$space;
+}
+
+.btn-outline {
+  line-height: 2.75*$space;
+  border: 2px solid transparent;
+}
+
+.btn-block {
+  display: block;
+}
+
+.btn-group {
+  font-size: 0;
+  .btn {
+    font-size: 1rem;
+    border-radius: 0;
+    &:not(:last-child){
+      border-right-width: 0;  
+    }   
+  }
+  .btn:first-child {
+    border-radius: .25*$space 0 0 .25*$space;
+  }
+  .btn:last-child {
+    border-radius: 0 .25*$space .25*$space 0;
+  }
+}
