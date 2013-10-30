@@ -1,0 +1,19 @@
+// Theme
+
+// Colors
+$blue: #0096cc;
+$dark: #1c2226;
+$light-gray: #dadfe0;
+$mid-gray: #cacfd0;
+
+.white { color: #fff; }
+.dark { color: $dark; }
+.blue { color: $blue; }
+.light-gray { color: $light-gray; }
+.mid-gray { color: $mid-gray; }
+
+.bg-white { background-color: #fff; }
+.bg-dark { background-color: $dark; }
+.bg-blue { background-color: $blue; }
+.bg-light-gray { background-color: $light-gray; }
+.bg-mid-gray { background-color: $mid-gray; }

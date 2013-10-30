@@ -1,0 +1,11 @@
+// Transition Extensions
+
+// Transition speeds
+.trans-slow { transition-duration: .5s; }
+.trans-medium { transition-duration: .25s; }
+.trans-fast { transition-duration: .1s; }
+
+// Transition timing functions
+.trans-ease { transition-timing-function: ease; }
+.trans-linear { transition-timing-function: linear; }
+.trans-ease-in-out { transition-timing-function: ease-in-out; }

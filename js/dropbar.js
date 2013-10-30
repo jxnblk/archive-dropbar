@@ -1,5 +1,10 @@
-// dropbar.js 
+// dropbar.js
+//
+// Element height getter/setter for using CSS transition-property: height
 
+var dropbar = function(elem) {
+  // re-write the js here to limit scope
+};
 var dropbar = document.getElementsByClassName('dropbar')[0];
 var dropbarHeight = dropbar.offsetHeight;
 var dropbarIsOpen = false;

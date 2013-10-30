@@ -1,0 +1,8 @@
+// Dropbar
+
+.dropbar {
+  transition-property: height;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+  overflow: hidden;
+}
