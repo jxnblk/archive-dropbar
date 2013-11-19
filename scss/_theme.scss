@@ -38,6 +38,11 @@ a {
 
 .bg-darker { background-color: darken($dark,10%); }
 
+.reverse {
+  color: #fff;
+  background-color: $dark;
+}
+
 // Links
 .link-white {
   color: #fff;
@@ -135,4 +140,8 @@ a {
     color: #fff;
     background-color: $blue;
   }
+}
+
+.rounded {
+  border-radius: .25*$space;
 }
