@@ -8,6 +8,10 @@
   white-space: nowrap; // is this too specific?
   border-radius: .25*$space;
   // Add resets for button element
+  -webkit-appearance: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .btn-small {

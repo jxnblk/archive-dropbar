@@ -53,6 +53,18 @@ a {
 // Forms
 
 // Inputs
+
+.input-light {
+  background-color: #fff;
+  border: 1px solid $mid-gray;
+  transition: all .3s ease;
+  outline: none;
+  &:focus {
+    border: 1px solid $blue;
+    box-shadow: 0 0 .25*$space rgba($blue,.8);
+  }
+}
+
 .input-dark {
   color: #fff;
   background-color: lighten($dark,10%);
