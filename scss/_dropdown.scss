@@ -1,6 +1,7 @@
 // Dropdown
 
 .dropdown {
+  display: inline-block;
   position: relative;
   &:hover .dropdown-body {
     display: block;

@@ -1,0 +1,32 @@
+// Menu Modules
+// Styles for link lists
+
+.menu {
+  list-style: none;
+  padding-left: 0;
+  a {
+    display: block;
+    line-height: 2*$space;
+    padding-top: .25*$space;
+    padding-bottom: .25*$space;
+    margin-right: 1*$space;
+    white-space: nowrap;
+  }
+}
+
+// For visually padded menus
+.menu-box a {
+  padding-right: 1*$space;
+  padding-left: 1*$space;
+  margin-right: 0;
+}
+
+// For inline menus
+.menu-inline {
+  li {
+    display: inline-block;
+  }
+}
+
+// Shrink wraps menu container to the width of children
+.menu-shrink { display: inline-block; }
