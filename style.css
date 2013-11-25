@@ -241,15 +241,24 @@ strong, .bold {
 
 .toolbar {
   min-height: 3rem;
-  line-height: 3rem;
-  padding-right: 1rem;
-  padding-left: 1rem; }
+  line-height: 3rem; }
+  .toolbar:before, .toolbar:after {
+    content: " ";
+    display: table; }
+  .toolbar:after {
+    clear: both; }
   .toolbar h1, .toolbar h2, .toolbar h3, .toolbar h4, .toolbar h5, .toolbar p, .toolbar li, .toolbar a {
     line-height: inherit;
     float: left; }
   .toolbar a:not(.flush) {
     padding-right: 1rem;
     padding-left: 1rem; }
+
+.toolbar-body {
+  clear: both; }
+  @media (min-width: 768px) {
+    .toolbar-body {
+      clear: none; } }
 
 .list-simple {
   list-style: none;
